@@ -50,13 +50,13 @@ openfile.pack()
 runApps = tk.Button(root, text="run apps", padx=10, pady=5, fg="white", bg="#263D42", command=runApps)
 runApps.pack()
 
-#have the save folders show up after re-opening
+#have the saved files show up after re-opening
 for app in apps:
     label = tk.Label(frame, text=app)
     label.pack()
 root.mainloop()
 
-#save recently opened files as save.txt
+#save recently opened files as saved.txt
 with open('saved.txt', 'w') as f:
     for app in apps:
         f.write(app + ',')
