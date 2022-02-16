@@ -6,7 +6,7 @@ import os
 root = tk.Tk()
 apps = []
 
-#to restart, delete the save file
+#to restart, delete the save files
 
 #getting rid of whitespace when not opening apps
 if os.path.isfile('save.txt'):
