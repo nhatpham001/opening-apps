@@ -6,11 +6,11 @@ import os
 root = tk.Tk()
 apps = []
 
-#to restart, delete the save files
+#to restart, delete the saved file
 
 #getting rid of whitespace when not opening apps
-if os.path.isfile('save.txt'):
-    with open('save.txt', 'r') as f:
+if os.path.isfile('saved.txt'):
+    with open('saved.txt', 'r') as f:
         tempApps = f.read()
         tempApps = tempApps.split(',')
         apps = [x for x in tempApps if x.strip()]
@@ -57,6 +57,6 @@ for app in apps:
 root.mainloop()
 
 #save recently opened files as save.txt
-with open('save.txt', 'w') as f:
+with open('saved.txt', 'w') as f:
     for app in apps:
         f.write(app + ',')
